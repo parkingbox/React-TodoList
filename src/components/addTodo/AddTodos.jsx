@@ -19,6 +19,12 @@ function Form() {
       content: "리팩토링하기",
       done: true,
     },
+    {
+      id: 3,
+      title: "리덕스 시작하기",
+      content: "지옥시작",
+      done: false,
+    },
   ]);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");

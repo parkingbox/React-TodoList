@@ -22,6 +22,9 @@ export const DeleteButton = styled.button`
   border: none;
   border-radius: 5px;
   height: 30px;
+  :hover {
+    scale: 1.1;
+  }
 `;
 export const CompleteButton = styled.button`
   cursor: pointer;
@@ -32,6 +35,9 @@ export const CompleteButton = styled.button`
   border: none;
   border-radius: 5px;
   height: 30px;
+  :hover {
+    scale: 1.1;
+  }
 `;
 export const CancelButton = styled.button`
   cursor: pointer;
@@ -42,4 +48,7 @@ export const CancelButton = styled.button`
   border: none;
   border-radius: 5px;
   height: 30px;
+  :hover {
+    scale: 1.1;
+  }
 `;
