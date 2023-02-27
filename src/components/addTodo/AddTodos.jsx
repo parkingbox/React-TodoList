@@ -1,39 +1,9 @@
 import List from "components/todoList/TodoList";
 import React, { useState } from "react";
 import styled from "styled-components";
+import { AddTodoWrapper, Button, Input, InputForm, Label } from "./style";
 
-const AddTodoWrapper = styled.div`
-  background-color: rgb(240, 240, 240);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-  font-weight: bolder;
-  padding: 0px 20px 0px 20px;
-  margin-top: 10px;
-  border-radius: 5px;
-`;
-const InputForm = styled.form`
-  border: none;
-  border-radius: 10px;
-  margin: 20px;
-`;
-const Label = styled.label``;
-const Input = styled.input`
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  margin: 0px 10px 0px 10px;
-`;
-const Button = styled.button`
-  background-color: rgb(67, 134, 125);
-  border: none;
-  border-radius: 5px;
-  width: 130px;
-  height: 40px;
-  color: white;
-  font-weight: bold;
-`;
+
 
 function Form() {
   const [todos, setTodos] = useState([
