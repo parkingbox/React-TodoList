@@ -1,4 +1,4 @@
-import Form from "components/addTodo/AddTodos";
+import AddTodos from "components/addTodo/AddTodos";
 import Header from "components/header/Header";
 import styled from "styled-components";
 
@@ -11,7 +11,7 @@ function Layout() {
   return (
     <Wrapper>
       <Header />
-      <Form />
+      <AddTodos />
     </Wrapper>
   );
 }

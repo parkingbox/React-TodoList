@@ -5,7 +5,7 @@ import { AddTodoWrapper, Button, Input, InputForm, Label } from "./style";
 
 
 
-function Form() {
+function AddTodos() {
   const [todos, setTodos] = useState([
     {
       id: 1,
@@ -50,6 +50,7 @@ function Form() {
   return (
     <>
       <AddTodoWrapper>
+        
         <InputForm>
           <Label>제목</Label>
           <Input
@@ -81,4 +82,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default AddTodos;

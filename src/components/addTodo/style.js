@@ -11,6 +11,7 @@ export const AddTodoWrapper = styled.div`
   margin-top: 10px;
   border-radius: 5px;
 `;
+
 export const InputForm = styled.form`
   border: none;
   border-radius: 10px;
