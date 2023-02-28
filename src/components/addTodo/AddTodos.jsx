@@ -1,4 +1,4 @@
-import List from "components/todoList/TodoList";
+import TodoList from "components/todoList/TodoList";
 import React, { useState } from "react";
 import styled from "styled-components";
 import { AddTodoWrapper, Button, Input, InputForm, Label } from "./style";
@@ -26,6 +26,7 @@ function AddTodos() {
       done: false,
     },
   ]);
+  
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
@@ -50,7 +51,6 @@ function AddTodos() {
   return (
     <>
       <AddTodoWrapper>
-        
         <InputForm>
           <Label>제목</Label>
           <Input
@@ -67,16 +67,15 @@ function AddTodos() {
             onChange={inputChange}
           />
         </InputForm>
-
         <Button onClick={addBtn}>추가하기</Button>
       </AddTodoWrapper>
       <>
-        <List
+        <TodoList
           title={title}
           content={content}
           todos={todos}
           setTodos={setTodos}
-        ></List>
+        ></TodoList>
       </>
     </>
   );

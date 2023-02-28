@@ -1,8 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { CancelButton, CompleteButton, DeleteButton, H1, Todo, Wrapper, Wrappers } from "./style";
+import {
+  CancelButton,
+  CompleteButton,
+  DeleteButton,
+  H1,
+  Todo,
+  Wrapper,
+  Wrappers,
+} from "./style";
 
-function List({ todos, setTodos }) {
+function TodoList({ todos, setTodos }) {
   function completeBtn(id) {
     setTodos(
       todos.map((todos) => {
@@ -13,8 +21,9 @@ function List({ todos, setTodos }) {
       })
     );
   }
-  function deleteBtn(id) {
-    setTodos(todos.filter((todo) => todo.id !== id));
+
+  function deleteBtn(index) {
+    setTodos(todos.filter((item) => item.id !== index));
   }
 
   function cancelBtn(id) {
@@ -72,4 +81,4 @@ function List({ todos, setTodos }) {
   );
 }
 
-export default List;
+export default TodoList;
