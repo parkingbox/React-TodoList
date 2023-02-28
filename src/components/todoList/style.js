@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
   display: flex;
   min-width: 240px;
 `;
+
 export const H1 = styled.h1``;
+
 export const Todo = styled.div`
   margin-right: 10px;
   padding: 5px;
@@ -13,6 +15,7 @@ export const Todo = styled.div`
   border: 3px solid rgb(67, 134, 125);
   border-radius: 5px;
 `;
+
 export const DeleteButton = styled.button`
   cursor: pointer;
   margin: 0px 10px 0px 10px;
