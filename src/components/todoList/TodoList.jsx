@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Done from "../done/Done";
 import {
   CancelButton,
   CompleteButton,
@@ -9,74 +10,27 @@ import {
   Wrapper,
   Wrappers,
 } from "./style";
+import Working from "../working/Working";
 
 function TodoList({ todos, setTodos }) {
   function completeBtn(id) {
     setTodos(
-      todos.map((todos) => {
-        if (todos.id === id) {
-          return { ...todos, done: true };
+      todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, done: !todo.done };
         }
-        return todos;
+        return { ...todo };
       })
     );
   }
-
-  function deleteBtn(index) {
-    setTodos(todos.filter((item) => item.id !== index));
-  }
-
-  function cancelBtn(id) {
-    setTodos(
-      todos.map((todos) => {
-        if (todos.id === id) {
-          return { ...todos, done: false };
-        }
-        return todos;
-      })
-    );
+  function deleteBtn(id) {
+    setTodos(todos.filter((item) => item.id !== id));
   }
 
   return (
     <Wrappers>
-      <H1>Working.. 🔥</H1>
-      <Wrapper>
-        {todos
-          .filter((item) => item.done !== true)
-          .map((item) => {
-            return (
-              <Todo key={item.id}>
-                <h2>{item.title}</h2>
-                <h4>{item.content}</h4>
-                <DeleteButton onClick={() => deleteBtn(item.id)}>
-                  삭제
-                </DeleteButton>
-                <CompleteButton onClick={() => completeBtn(item.id)}>
-                  완료
-                </CompleteButton>
-              </Todo>
-            );
-          })}
-      </Wrapper>
-      <H1>Done..🎉</H1>
-      <Wrapper>
-        {todos
-          .filter((item) => item.done === true)
-          .map((item) => {
-            return (
-              <Todo key={item.id}>
-                <h2>{item.title}</h2>
-                <h4>{item.content}</h4>
-                <DeleteButton onClick={() => deleteBtn(item.id)}>
-                  삭제
-                </DeleteButton>
-                <CancelButton onClick={() => cancelBtn(item.id)}>
-                  취소
-                </CancelButton>
-              </Todo>
-            );
-          })}
-      </Wrapper>
+      <Working todos={todos} deleteBtn={deleteBtn} completeBtn={completeBtn} />
+      <Done todos={todos} deleteBtn={deleteBtn} cancelBtn={completeBtn} />
     </Wrappers>
   );
 }
