@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Done from "../done/Done";
-import {
-  CancelButton,
-  CompleteButton,
-  DeleteButton,
-  H1,
-  Todo,
-  Wrapper,
-  Wrappers,
-} from "./style";
+import { Wrapper, Wrappers } from "./style";
 import Working from "../working/Working";
 
 function TodoList({ todos, setTodos }) {

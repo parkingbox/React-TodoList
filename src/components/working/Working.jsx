@@ -1,15 +1,13 @@
 import React from "react";
 import {
-  CancelButton,
   CompleteButton,
   DeleteButton,
   H1,
   Todo,
   Wrapper,
-  Wrappers,
 } from "../todoList/style";
 
-function Working({todos, deleteBtn, completeBtn}) {
+function Working({ todos, deleteBtn, completeBtn }) {
   return (
     <>
       <H1>Working.. 🔥</H1>

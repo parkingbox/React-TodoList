@@ -1,12 +1,10 @@
 import React from "react";
 import {
   CancelButton,
-  CompleteButton,
   DeleteButton,
   H1,
   Todo,
   Wrapper,
-  Wrappers,
 } from "../todoList/style";
 
 function Done({ todos, deleteBtn, cancelBtn }) {

@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { AddTodoWrapper, Button, Input, InputForm, Label } from "./style";
 
 
-
 function AddTodos() {
   const [todos, setTodos] = useState([
     {
@@ -26,7 +25,7 @@ function AddTodos() {
       done: false,
     },
   ]);
-  
+
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
